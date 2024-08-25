@@ -5,10 +5,12 @@
 
 	const storeCounter = functionCreateStore({
 		value: 0,
-		name: 'nameCounter',
-		persistent: false,
+		name: 'namePersistentCounter',
+		persistent: true,
 	});
 </script>
+
+<h2>Modify the counter and refresh the page to see that the counter will persist.</h2>
 
 <h1>PARENT:</h1>
 

@@ -1,6 +1,27 @@
 {
 	"name": "svelte-runes-store",
 	"version": "0.0.1",
+	"description": "svelte-runes-store is a svelte/sveltekit package to build (persistent) svelte stores using runes.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joaquimnetocel/svelte-datatables-net.git"
+	},
+	"bugs": {
+		"url": "https://github.com/joaquimnetocel/svelte-datatables-net/issues"
+	},
+	"keywords": [
+		"svelte stores",
+		"stores",
+		"runes",
+		"svelte runes stores",
+		"persistent svelte stores",
+		"persistent stores",
+		"svelte",
+		"sveltekit",
+		"svelte5"
+	],
+	"author": "Joaquim Neto <joaquim.neto.cel@gmail.com>",
+	"license": "ISC",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { functionCreateStore } from '$lib/index.js';
-	import Component1 from './Component1.svelte';
-	import Component2 from './Component2.svelte';
+	import Component1 from '../Component1.svelte';
+	import Component2 from '../Component2.svelte';
+	import type { typeNames } from './typeNames.js';
 
-	const storeCounter = functionCreateStore({
+	const storeCounter = functionCreateStore<number, typeNames>({
 		value: 0,
 		name: 'nameCounter',
 		persistent: false,
