@@ -4,6 +4,8 @@
 
 svelte-runes-store is a svelte/sveltekit package to build (persistent) svelte stores using runes.
 
+![GIF EXAMPLE](./gif.gif)
+
 ## VERSIONS
 
 - WORKS WITH SVELTE 5 ONLY.
@@ -16,8 +18,7 @@ svelte-runes-store is a svelte/sveltekit package to build (persistent) svelte st
 
 ## DEMOS
 
-- [REPL: BASIC EXAMPLE](?)
-- [REPL: PERSISTENT EXAMPLE](?)
+- [REPL: BASIC EXAMPLE](https://svelte.dev/repl/d5d3161f660c48db902bd98bc0e7b94f)
 
 ## INSTALLATION
 

@@ -1,6 +1,6 @@
 {
 	"name": "svelte-runes-store",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "svelte-runes-store is a svelte/sveltekit package to build (persistent) svelte stores using runes.",
 	"repository": {
 		"type": "git",
