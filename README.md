@@ -4,7 +4,7 @@
 
 svelte-runes-store is a svelte/sveltekit package to build (persistent) svelte stores using runes.
 
-![GIF EXAMPLE](./gif.gif)
+![GIF EXAMPLE](./svelte-runes-store.gif)
 
 ## VERSIONS
 
