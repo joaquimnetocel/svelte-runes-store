@@ -7,7 +7,6 @@
 	const storeCounter = functionCreateStore<number, typeNames>({
 		value: 0,
 		name: 'nameCounter',
-		persistent: false,
 	});
 </script>
 
