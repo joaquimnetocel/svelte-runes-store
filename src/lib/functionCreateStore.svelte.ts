@@ -1,40 +1,47 @@
+import { browser } from '$app/environment';
 import { setContext } from 'svelte';
 
-export function functionCreateStore<genericType, genericForName extends string = string>({
+export function functionCreateStore<T, K extends string = string>({
 	value,
-	name,
+	key,
 	persistent = false,
 	storage = 'localStorage',
 }: {
-	value: genericType;
-	name: genericForName;
+	value: T;
+	key: K;
 	persistent?: boolean;
 	storage?: 'localStorage' | 'sessionStorage';
 }) {
-	const browser = typeof window !== 'undefined' && typeof document !== 'undefined';
-	if (persistent && browser) {
-		const chosenStorage = storage === 'localStorage' ? localStorage : sessionStorage;
-		const stringBrowserValue = chosenStorage.getItem(name);
-		if (stringBrowserValue !== null) {
-			value = JSON.parse(stringBrowserValue);
-		}
+	if (!persistent || !browser) {
+		let state = $state(value);
+		const store = {
+			get value() {
+				return state;
+			},
+			set value(par) {
+				state = par;
+			},
+		};
+		setContext(key, store);
+		return store;
 	}
 
+	const chosenStorage = storage === 'localStorage' ? localStorage : sessionStorage;
+	const stored = chosenStorage.getItem(key);
+	if (stored !== null) {
+		value = JSON.parse(stored);
+	}
 	let state = $state(value);
-
 	const store = {
 		get value() {
 			return state;
 		},
 		set value(par) {
-			if (persistent && browser) {
-				const chosenStorage = storage === 'localStorage' ? localStorage : sessionStorage;
-				chosenStorage.setItem(name, JSON.stringify(par));
-			}
+			chosenStorage.setItem(key, JSON.stringify(par));
 			state = par;
 		},
 	};
-	setContext(name, store);
+	setContext(key, store);
 
 	return store;
 }

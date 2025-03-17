@@ -2,7 +2,7 @@
 	import { functionReadStore } from '$lib/functionReadStore.js';
 	import type { typeNames } from './typeNames.js';
 
-	const storeCounter = functionReadStore<number, typeNames>('nameCounter');
+	const storeCounter = functionReadStore<number, typeNames>('keyCounter');
 </script>
 
 <h1>COMPONENT 1:</h1>

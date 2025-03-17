@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { functionReadStore } from '$lib/functionReadStore.js';
 
-	const storeCounter = functionReadStore<number>('nameCounter');
+	const storeCounter = functionReadStore<number>('keyCounter');
 </script>
 
 <h1>COMPONENT 1:</h1>

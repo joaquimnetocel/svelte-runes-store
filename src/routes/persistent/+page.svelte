@@ -5,7 +5,7 @@
 
 	const storeCounter = functionCreateStore({
 		value: 0,
-		name: 'namePersistentCounter',
+		key: 'keyPersistentCounter',
 		persistent: true,
 	});
 </script>

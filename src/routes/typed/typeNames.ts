@@ -1,1 +1,1 @@
-export type typeNames = 'nameCounter';
+export type typeNames = 'keyCounter';

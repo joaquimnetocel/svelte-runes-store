@@ -6,7 +6,7 @@
 
 	const storeCounter = functionCreateStore<number, typeNames>({
 		value: 0,
-		name: 'nameCounter',
+		key: 'keyCounter',
 	});
 </script>
 

@@ -50,12 +50,12 @@ npm run dev
 | PARAMETER    | DESCRIPTION                 | TYPE                               | REQUIRED | DEFAULT        |
 | ------------ | --------------------------- | ---------------------------------- | -------- | -------------- |
 | `value`      | INITIAL VALUE OF THE STORE. | `Generic`                          | YES      | -              |
-| `name`       | STORE NAME.                 | `string`                           | YES      | -              |
+| `key`        | STORE CONTEXT KEY.          | `string`                           | YES      | -              |
 | `persistent` | PERSISTENT STORE (OR NOT).  | `boolean`                          | NO       | `false`        |
 | `storage`    | STORAGE TYPE.               | `localStorage` OR `sessionStorage` | NO       | `localStorage` |
 
 - PROPS OF `functionReadStore`:
 
-| PARAMETER | DESCRIPTION | TYPE     | REQUIRED | DEFAULT |
-| --------- | ----------- | -------- | -------- | ------- |
-| `name`    | STORE NAME. | `string` | YES      | -       |
+| PARAMETER | DESCRIPTION        | TYPE     | REQUIRED | DEFAULT |
+| --------- | ------------------ | -------- | -------- | ------- |
+| `key`     | STORE CONTEXT KEY. | `string` | YES      | -       |

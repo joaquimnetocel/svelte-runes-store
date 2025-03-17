@@ -1,7 +1,5 @@
 import { getContext } from 'svelte';
 
-export function functionReadStore<genericForValue, genericForName extends string = string>(
-	name: genericForName,
-) {
-	return getContext<{ value: genericForValue }>(name);
+export function functionReadStore<T, K extends string = string>(key: K) {
+	return getContext<{ value: T }>(key);
 }
