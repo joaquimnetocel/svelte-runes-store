@@ -1,4 +1,4 @@
-import { browser } from '$app/environment';
+import { BROWSER } from 'esm-env';
 import { setContext } from 'svelte';
 
 export function functionCreateStore<T, K extends string = string>({
@@ -12,7 +12,7 @@ export function functionCreateStore<T, K extends string = string>({
 	persistent?: boolean;
 	storage?: 'localStorage' | 'sessionStorage';
 }) {
-	if (!persistent || !browser) {
+	if (!persistent || !BROWSER) {
 		let state = $state(value);
 		const store = {
 			get value() {

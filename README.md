@@ -2,13 +2,13 @@
 
 ![GITHUB VERSION](https://img.shields.io/github/package-json/v/joaquimnetocel/svelte-runes-store?label=github%20version&logo=github&color=lightgray) ![NPM VERSION](https://img.shields.io/npm/v/svelte-runes-store?color=red&logo=npm&label=npm%20version) ![NPM Downloads](https://img.shields.io/npm/dw/svelte-runes-store?color=red&label=npm%20downloads&logo=npm) ![NPM License](https://img.shields.io/npm/l/svelte-runes-store?color) [![Twitter](https://img.shields.io/twitter/follow/:twitterHandle.svg?style=social&label=@joaquimnetocel)](https://twitter.com/joaquimnetocel)
 
-svelte-runes-store is a sveltekit package to build (persistent) svelte states that can be shared among components through the context.
+svelte-runes-store is a svelte package to build (persistent) svelte states that can be shared among components through the context.
 
 ![GIF EXAMPLE](./svelte-runes-store.gif)
 
 ## VERSIONS
 
-- WORKS WITH SVELTEKIT AND SVELTE 5 ONLY.
+- WORKS WITH SVELTE 5 AND SVELTEKIT.
 
 ## FEATURES
 
