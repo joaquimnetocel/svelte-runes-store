@@ -1,56 +1,58 @@
-# svelte-runes-store
+# Svelte library
 
-![GITHUB VERSION](https://img.shields.io/github/package-json/v/joaquimnetocel/svelte-runes-store?label=github%20version&logo=github&color=lightgray) ![NPM VERSION](https://img.shields.io/npm/v/svelte-runes-store?color=red&logo=npm&label=npm%20version) ![NPM Downloads](https://img.shields.io/npm/dw/svelte-runes-store?color=red&label=npm%20downloads&logo=npm) ![NPM License](https://img.shields.io/npm/l/svelte-runes-store?color) [![Twitter](https://img.shields.io/twitter/follow/:twitterHandle.svg?style=social&label=@joaquimnetocel)](https://twitter.com/joaquimnetocel)
+Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
 
-svelte-runes-store is a svelte package to build (persistent) svelte states that can be shared among components through the context.
+Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
 
-![GIF EXAMPLE](./svelte-runes-store.gif)
+## Creating a project
 
-## VERSIONS
-
-- WORKS WITH SVELTE 5 AND SVELTEKIT.
-
-## FEATURES
-
-- USES THE SVELTE 5 RUNES.
-- PERSISTENT AND NON PERSISTENT STORES.
-- TYPESCRIPT SUPPORT.
-
-## INSTALLATION
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-npm install svelte-runes-store
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
 ```
 
-## EXAMPLES
+## Developing
 
-To run the examples from `/src/routes`:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
-git clone https://github.com/joaquimnetocel/svelte-runes-store.git
-cd svelte-runes-store
-npm install
 npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-## COMPONENT STRUCTURE
+Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
 
-- `functionCreateStore`: Function to create the store.
-- `functionReadStore`: Function to read the store.
+## Building
 
-## PARAMETERS
+To build your library:
 
-- PARAMETERS OF `functionCreateStore`:
+```bash
+npm run package
+```
 
-| PARAMETER    | DESCRIPTION                 | TYPE                               | REQUIRED | DEFAULT        |
-| ------------ | --------------------------- | ---------------------------------- | -------- | -------------- |
-| `value`      | INITIAL VALUE OF THE STORE. | `Generic`                          | YES      | -              |
-| `key`        | CONTEXT KEY.                | `string`                           | YES      | -              |
-| `persistent` | PERSISTENT STORE (OR NOT).  | `boolean`                          | NO       | `false`        |
-| `storage`    | STORAGE TYPE.               | `localStorage` OR `sessionStorage` | NO       | `localStorage` |
+To create a production version of your showcase app:
 
-- PARAMETERS OF `functionReadStore`:
+```bash
+npm run build
+```
 
-| PARAMETER | DESCRIPTION  | TYPE     | REQUIRED | DEFAULT |
-| --------- | ------------ | -------- | -------- | ------- |
-| `key`     | CONTEXT KEY. | `string` | YES      | -       |
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Publishing
+
+Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+
+To publish your library to [npm](https://www.npmjs.com):
+
+```bash
+npm publish
+```

@@ -1,34 +1,3 @@
-<script lang="ts">
-	import { functionCreateStore } from '$lib/index.js';
-	import Component1 from './Component1.svelte';
-	import Component2 from './Component2.svelte';
-
-	const storeCounter = functionCreateStore({
-		value: 0,
-		key: 'keyCounter',
-	});
-</script>
-
-<h1>PARENT:</h1>
-
-<div>
-	<button
-		onclick={() => {
-			storeCounter.value = storeCounter.value - 1;
-		}}
-	>
-		-
-	</button>
-	{storeCounter.value}
-
-	<button
-		onclick={() => {
-			storeCounter.value = storeCounter.value + 1;
-		}}
-	>
-		+
-	</button>
-</div>
-
-<Component1 />
-<Component2 />
+<h1>Welcome to your library project</h1>
+<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
