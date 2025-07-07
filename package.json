@@ -1,7 +1,8 @@
 {
 	"name": "svelte-runes-store",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"scripts": {
+		"ncu": "npx npm-check-updates -i",
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
 		"preview": "vite preview",
