@@ -1,6 +1,27 @@
 {
 	"name": "svelte-runes-store",
 	"version": "0.1.0",
+	"description": "svelte-runes-store is a svelte/sveltekit package to build (persistent) svelte states that can be shared among components through the context.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/joaquimnetocel/svelte-runes-store.git"
+	},
+	"bugs": {
+		"url": "https://github.com/joaquimnetocel/svelte-runes-store/issues"
+	},
+	"keywords": [
+		"svelte stores",
+		"stores",
+		"runes",
+		"svelte runes stores",
+		"persistent svelte stores",
+		"persistent stores",
+		"svelte",
+		"sveltekit",
+		"svelte5"
+	],
+	"author": "Joaquim Neto <joaquim.neto.cel@gmail.com>",
+	"license": "ISC",
 	"scripts": {
 		"ncu": "npx npm-check-updates -i",
 		"dev": "vite dev",
@@ -52,8 +73,5 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.2.6"
-	},
-	"keywords": [
-		"svelte"
-	]
+	}
 }

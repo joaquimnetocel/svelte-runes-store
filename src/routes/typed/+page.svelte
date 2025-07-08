@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { store } from '$lib/index.js';
-	import Component1 from './Component1.svelte';
-	import Component2 from './Component2.svelte';
+	import Component1 from '../Component1.svelte';
+	import Component2 from '../Component2.svelte';
+	import type { typeNames } from './typeNames.js';
 
-	store.create({
+	store.create<number, typeNames>({
 		value: 0,
 		key: 'keyCounter',
 	});
