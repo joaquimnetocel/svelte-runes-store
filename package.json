@@ -1,6 +1,6 @@
 {
 	"name": "svelte-runes-store",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "svelte-runes-store is a svelte/sveltekit package to build (persistent) svelte states that can be shared among components through the context.",
 	"repository": {
 		"type": "git",

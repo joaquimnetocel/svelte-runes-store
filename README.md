@@ -13,8 +13,9 @@ svelte-runes-store is a svelte package to build (persistent) svelte states that 
 ## FEATURES
 
 - USES THE SVELTE 5 RUNES.
-- PERSISTENT AND NON PERSISTENT STORES.
+- PERSISTENT AND NON-PERSISTENT STORES.
 - TYPESCRIPT SUPPORT.
+- ADDS STORES TO THE CONTEXT, AVOIDING STATE SHARING IN SSR.
 
 ## INSTALLATION
 
@@ -35,21 +36,20 @@ npm run dev
 
 ## COMPONENT STRUCTURE
 
-- `functionCreateStore`: Function to create the store.
-- `functionReadStore`: Function to read the store.
+- `store.create`: Function to create the store.
+- `store.read`: Function to read the store.
 
 ## PARAMETERS
 
-- PARAMETERS OF `functionCreateStore`:
+- PARAMETERS OF `store.create`:
 
-| PARAMETER    | DESCRIPTION                 | TYPE                               | REQUIRED | DEFAULT        |
-| ------------ | --------------------------- | ---------------------------------- | -------- | -------------- |
-| `value`      | INITIAL VALUE OF THE STORE. | `Generic`                          | YES      | -              |
-| `key`        | CONTEXT KEY.                | `string`                           | YES      | -              |
-| `persistent` | PERSISTENT STORE (OR NOT).  | `boolean`                          | NO       | `false`        |
-| `storage`    | STORAGE TYPE.               | `localStorage` OR `sessionStorage` | NO       | `localStorage` |
+| PARAMETER | DESCRIPTION                 | TYPE                               | REQUIRED | DEFAULT        |
+| --------- | --------------------------- | ---------------------------------- | -------- | -------------- |
+| `value`   | INITIAL VALUE OF THE STORE. | `Generic`                          | YES      | -              |
+| `key`     | CONTEXT KEY.                | `string`                           | YES      | -              |
+| `storage` | STORAGE TYPE.               | `localStorage` OR `sessionStorage` | NO       | `localStorage` |
 
-- PARAMETERS OF `functionReadStore`:
+- PARAMETERS OF `store.read`:
 
 | PARAMETER | DESCRIPTION  | TYPE     | REQUIRED | DEFAULT |
 | --------- | ------------ | -------- | -------- | ------- |
