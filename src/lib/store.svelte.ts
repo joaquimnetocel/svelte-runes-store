@@ -17,11 +17,7 @@ function create<V, K extends string = string>({
 		const chosenStorage = storage === 'localStorage' ? localStorage : sessionStorage;
 		const stored = chosenStorage.getItem(key);
 		if (stored !== null) {
-			try {
-				initial = JSON.parse(stored);
-			} catch {
-				// Ignora erro de parsing e usa o valor padrão
-			}
+			initial = JSON.parse(stored);
 		}
 	}
 
